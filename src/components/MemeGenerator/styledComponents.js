@@ -8,6 +8,10 @@ export const MemeApp = styled.div`
   justify-content: center;
   align-items: center;
 `
+export const MemeAppCard = styled.div`
+  max-width: 1110px;
+  padding: 15px;
+`
 export const Heading = styled.h1`
   font-family: 'Open Sans';
   font-size: 35px;
@@ -87,8 +91,8 @@ export const MemeContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 250px;
-  width: 300px;
+  height: 280px;
+  width: 350px;
   margin-left: 25px;
   @media screen and (max-width: 767px) {
     margin-top: 25px;

@@ -12,6 +12,7 @@ import {
   FormButton,
   MemeContainer,
   MemeText,
+  MemeAppCard,
 } from './styledComponents'
 
 const fontSizesOptionsList = [
@@ -162,20 +163,22 @@ class MemeGenerator extends Component {
     } = this.state
     return (
       <MemeApp>
-        <Heading>Meme Generator</Heading>
-        <MemeContent>
-          <MemeForm onSubmit={this.GenerateMeme}>
-            {this.renderImageInputCard()}
-            {this.renderTopTextInput()}
-            {this.renderBottomTextInput()}
-            {this.renderFontSizeOption()}
-            <FormButton type="submit">Generate</FormButton>
-          </MemeForm>
-          <MemeContainer data-testid="meme" backGroundImage={backGroundImage}>
-            <MemeText fontSize={fontSize}>{topTextValue}</MemeText>
-            <MemeText fontSize={fontSize}>{bottomTextValue}</MemeText>
-          </MemeContainer>
-        </MemeContent>
+        <MemeAppCard>
+          <Heading>Meme Generator</Heading>
+          <MemeContent>
+            <MemeForm onSubmit={this.GenerateMeme}>
+              {this.renderImageInputCard()}
+              {this.renderTopTextInput()}
+              {this.renderBottomTextInput()}
+              {this.renderFontSizeOption()}
+              <FormButton type="submit">Generate</FormButton>
+            </MemeForm>
+            <MemeContainer data-testid="meme" backGroundImage={backGroundImage}>
+              <MemeText fontSize={fontSize}>{topTextValue}</MemeText>
+              <MemeText fontSize={fontSize}>{bottomTextValue}</MemeText>
+            </MemeContainer>
+          </MemeContent>
+        </MemeAppCard>
       </MemeApp>
     )
   }
